@@ -7,7 +7,7 @@ Conducted at Naval Physical and Oceanographic Laboratory (NPOL), DRDO
 
 ##  Overview
 
-This repository presents a research-oriented study and experimental validation of **Principal Component Analysis (PCA)** conducted during my internship at the Naval Physical and Oceanographic Laboratory (NPOL), DRDO.
+This repository presents a research-oriented study and experimental validation of **Principal Component Analysis (PCA)** conducted during my internship at NPOL, DRDO.
 
 The objective was not merely to apply PCA, but to deeply understand:
 
@@ -17,7 +17,7 @@ The objective was not merely to apply PCA, but to deeply understand:
 - How eigen decomposition relates to Singular Value Decomposition (SVD)  
 - When PCA succeeds and where its limitations arise  
 
-This work combines **mathematical derivation, conceptual reasoning, and experimental validation** on real datasets.
+This work combines mathematical derivation, conceptual reasoning, and experimental validation on real datasets.
 
 ---
 
@@ -38,47 +38,37 @@ The internship emphasized understanding PCA from first principles rather than tr
 
 ##  Mathematical Foundation
 
-Given a mean-centered data matrix:
+Let the mean-centered data matrix be:
 
-\[
-X \in \mathbb{R}^{m \times n}
-\]
+X ∈ ℝ^(m × n)
 
 ### Covariance Matrix
 
-\[
-C_x = \frac{1}{n - 1} X^T X
-\]
+Cₓ = (1 / (n − 1)) XᵀX
 
 - Diagonal entries → Feature variances  
 - Off-diagonal entries → Feature covariances  
 
-PCA seeks a transformation matrix \( P \) such that:
+PCA seeks a transformation matrix P such that:
 
-\[
-P C_x P^T = D
-\]
+P Cₓ Pᵀ = D  
 
-Where \( D \) is a diagonal matrix.
+where D is diagonal.
 
 ---
 
 ### Eigen Decomposition
 
-\[
-C_x v = \lambda v
-\]
+Cₓ v = λ v
 
-- \( v \) → Eigenvectors (principal directions)  
-- \( \lambda \) → Eigenvalues (variance captured along that direction)  
+- v → Eigenvectors (principal directions)  
+- λ → Eigenvalues (variance captured along that direction)  
 
 Principal components correspond to eigenvectors associated with the largest eigenvalues.
 
-Projection of data:
+Projection:
 
-\[
-Y = E^T X
-\]
+Y = Eᵀ X
 
 ---
 
@@ -86,14 +76,10 @@ Y = E^T X
 
 Alternatively,
 
-\[
-X = U \Sigma V^T
-\]
+X = U Σ Vᵀ
 
-Where:
-
-- \( V \) contains principal directions  
-- Singular values are directly related to eigenvalues  
+- V contains principal directions  
+- Singular values relate directly to eigenvalues  
 
 The equivalence between eigen decomposition and SVD was explored and analyzed during the internship.
 
@@ -104,7 +90,7 @@ The equivalence between eigen decomposition and SVD was explored and analyzed du
 To reduce dimensionality:
 
 1. Sort eigenvalues in descending order  
-2. Select top \( k \) eigenvectors  
+2. Select top k eigenvectors  
 3. Project data onto the reduced basis  
 
 This preserves maximum variance while discarding low-variance noise components.
@@ -113,10 +99,10 @@ This preserves maximum variance while discarding low-variance noise components.
 
 ##  Experimental Validation
 
-PCA was applied to two real datasets:
+PCA was applied to:
 
-- **Diabetes Dataset**
-- **Breast Cancer Dataset**
+- Diabetes Dataset  
+- Breast Cancer Dataset  
 
 Each dataset was:
 
@@ -159,7 +145,7 @@ Possible extensions:
 - Derived covariance-based optimization objective  
 - Understood eigen decomposition and orthogonality  
 - Explored PCA as both variance maximization and SVD formulation  
-- Validated theoretical derivations through implementation and visualization  
+- Validated theory through implementation and visualization  
 - Analyzed limitations and real-world applicability  
 
 ---
@@ -190,7 +176,7 @@ Principal-Component-Analysis-internship/
 
 ##  Internship Research Report
 
-The detailed theoretical analysis, derivations, and conceptual explanations are documented in the internship report:
+The detailed theoretical analysis and derivations are documented in the internship report:
 
 🔗 [View Full Internship Report](report/Intership_PCA_Report.pdf)
 
@@ -198,7 +184,7 @@ The detailed theoretical analysis, derivations, and conceptual explanations are 
 
 ##  Internship Context
 
-This research-oriented study was conducted as part of a structured Machine Learning internship at:
+This research-oriented study was conducted at:
 
 Naval Physical and Oceanographic Laboratory (NPOL)  
 Defence Research and Development Organisation (DRDO), Government of India  
@@ -213,4 +199,4 @@ This project transformed PCA from a theoretical concept into a fully understood 
 
 By connecting linear algebra, optimization, and statistical reasoning, this work reinforced the importance of mathematical foundations in machine learning.
 
-The study bridges theory and implementation, demonstrating both conceptual clarity and experimental validation.
+The study bridges theory and implementation, demonstrating conceptual clarity and experimental validation.
