@@ -161,17 +161,18 @@ Possible extensions:
 ---
 
 ##  Repository Structure
-Principal-Component-Analysis-internship/
+
+principal-component-analysis/
 │
 ├── notebooks/
-│ └── pca_analysis.ipynb
+│   └── pca_analysis.ipynb
 │
 ├── report/
-│ └── Intership_PCA_Report.pdf
+│   └── Intership_PCA_Report.pdf
 │
 ├── requirements.txt
-├── .gitignore
 └── README.md
+
 ---
 
 ##  Internship Research Report
