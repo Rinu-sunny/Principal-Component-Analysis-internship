@@ -161,7 +161,7 @@ Possible extensions:
 ---
 
 ##  Repository Structure
-
+```
 principal-component-analysis/
 │
 ├── notebooks/
@@ -171,9 +171,9 @@ principal-component-analysis/
 │   └── Intership_PCA_Report.pdf
 │
 ├── requirements.txt
+├── .gitignore
 └── README.md
-
----
+```
 
 ##  Internship Research Report
 
