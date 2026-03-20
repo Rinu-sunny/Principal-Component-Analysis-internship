@@ -1,6 +1,5 @@
-# Principal Component Analysis (PCA): Theoretical and Experimental Study
-
-## Internship Research Project  
+# Principal Component Analysis (PCA): Theoretical and Experimental Study  
+### Internship Research Project  
 Conducted at Naval Physical and Oceanographic Laboratory (NPOL), DRDO  
 June – July 2025  
 
@@ -8,21 +7,21 @@ June – July 2025
 
 ##  Overview
 
-This repository presents a research-oriented study and implementation of **Principal Component Analysis (PCA)** carried out during my internship at the Naval Physical and Oceanographic Laboratory (NPOL), DRDO.
+This repository presents a research-oriented study and experimental validation of **Principal Component Analysis (PCA)** conducted during my internship at the Naval Physical and Oceanographic Laboratory (NPOL), DRDO.
 
-The objective of this work was not only to implement PCA, but to deeply understand:
+The objective of this work was not merely to implement PCA, but to deeply understand:
 
 - Why PCA maximizes variance  
 - Why the covariance matrix formulation is used  
 - Why eigenvectors define principal directions  
-- How SVD and eigen decomposition are related  
-- When PCA succeeds and when it fails  
+- How eigen decomposition relates to Singular Value Decomposition (SVD)  
+- When PCA succeeds and where its limitations arise  
 
 This study combines mathematical derivation, conceptual reasoning, and experimental validation on real datasets.
 
 ---
 
-## Research Motivation
+##  Research Motivation
 
 High-dimensional datasets often contain:
 
@@ -33,86 +32,82 @@ High-dimensional datasets often contain:
 
 PCA addresses these issues by transforming data into an orthogonal basis that captures maximum variance in descending order.
 
-This project investigates PCA from first principles, rather than treating it as a black-box library function.
+This internship emphasized understanding PCA from first principles rather than treating it as a black-box library function.
 
 ---
 
-## Mathematical Foundation
+##  Mathematical Foundation
 
 Given a mean-centered data matrix:
 
-X ∈ ℝ^(m×n)
+\[
+X \in \mathbb{R}^{m \times n}
+\]
 
 ### Covariance Matrix
 
-Cₓ = (1 / (n - 1)) X Xᵀ
+\[
+C_x = \frac{1}{n-1} X^T X
+\]
 
-- Diagonal entries → feature variances  
-- Off-diagonal entries → feature covariances  
+- Diagonal entries → Feature variances  
+- Off-diagonal entries → Feature covariances  
 
-PCA seeks a transformation matrix **P** such that:
+PCA seeks a transformation matrix \( P \) such that:
 
-P Cₓ Pᵀ = D  
+\[
+P C_x P^T = D
+\]
 
-Where **D** is diagonal.
-
----
-
-###  Eigen Decomposition
-
-Cₓ v = λ v  
-
-- v → Eigenvectors (principal directions)  
-- λ → Eigenvalues (variance captured along that direction)  
-
-Principal components are the eigenvectors corresponding to the largest eigenvalues.
-
-Projection:
-
-Y = Eᵀ X  
+Where \( D \) is a diagonal matrix.
 
 ---
 
-###  PCA via Singular Value Decomposition (SVD)
+### Eigen Decomposition
+
+\[
+C_x v = \lambda v
+\]
+
+- \( v \) → Eigenvectors (principal directions)  
+- \( \lambda \) → Eigenvalues (variance captured along that direction)  
+
+Principal components correspond to eigenvectors associated with the largest eigenvalues.
+
+Projection of data:
+
+\[
+Y = E^T X
+\]
+
+---
+
+##  PCA via Singular Value Decomposition (SVD)
 
 Alternatively,
 
-X = U Σ Vᵀ  
+\[
+X = U \Sigma V^T
+\]
 
 Where:
-- V contains principal directions  
-- Singular values relate to eigenvalues  
 
-This equivalence was explored and analyzed during the study.
+- \( V \) contains principal directions  
+- Singular values relate directly to eigenvalues  
+
+The equivalence between eigen decomposition and SVD was explored and analyzed during the study.
 
 ---
 
-## Dimensionality Reduction Principle
+##  Dimensionality Reduction Principle
 
 To reduce dimensionality:
 
 1. Sort eigenvalues in descending order  
-2. Select top k eigenvectors  
+2. Select top \( k \) eigenvectors  
 3. Project data onto reduced basis  
 
 This preserves maximum variance while discarding low-variance noise components.
-
----
-
-##  Implementation Details
-
-Two forms of implementation were explored:
-
-### PCA using NumPy (Eigen Decomposition)
-- Manual covariance computation  
-- Eigenvalue and eigenvector extraction  
-- Sorting and projection  
-
-### PCA using scikit-learn
-Library used: scikit-learn  
-- StandardScaler for normalization  
-- PCA for dimensionality reduction  
-- Variance analysis  
 
 ---
 
@@ -133,18 +128,13 @@ Each dataset was:
   - PC1 vs PC2 Projection  
   - PC1 vs Last Principal Component  
 
-These visualizations confirmed theoretical expectations:
+### Observations
+
 - Early components capture dominant structure  
 - Later components contain negligible variance  
-
----
-
-## Observations
-
 - Standardization is critical before PCA  
 - Eigenvalues directly correspond to variance magnitude  
 - Variance maximization aligns with minimum reconstruction error  
-- PCA effectively filters noise and redundancy  
 - PCA assumes linear structure in data  
 
 ---
@@ -153,23 +143,24 @@ These visualizations confirmed theoretical expectations:
 
 - Assumes linear relationships  
 - Sensitive to feature scaling  
-- Does not consider output labels (unsupervised)  
+- Unsupervised (does not consider output labels)  
 - May fail for highly non-linear manifolds  
 
 Possible extensions:
+
 - Kernel PCA  
 - Independent Component Analysis (ICA)  
 
 ---
 
-## Key Learning Outcomes
+##  Key Learning Outcomes
 
-- Developed mathematical understanding of PCA  
+- Developed strong mathematical understanding of PCA  
 - Derived covariance-based optimization objective  
 - Understood eigen decomposition and orthogonality  
 - Explored PCA as both variance maximization and SVD formulation  
-- Validated theory through implementation and visualization  
-- Studied limitations and real-world applicability  
+- Validated theoretical derivations through implementation and visualization  
+- Analyzed limitations and real-world applicability  
 
 ---
 
@@ -183,34 +174,25 @@ Possible extensions:
 
 ---
 
-## Repository Structure
-
-```
+##  Repository Structure
 principal-component-analysis/
 │
 ├── notebooks/
-│   └── pca_analysis.ipynb
-│
-├── src/
-│   ├── pca_from_scratch.py
-│   └── pca_with_sklearn.py
+│ └── pca_analysis.ipynb
 │
 ├── report/
-│   └── Internship_PCA_Report.pdf
+│ └── Intership_PCA_Report.pdf
 │
 ├── requirements.txt
 └── README.md
-```
 
 ---
 
-## Conclusion
+##  Internship Research Report
 
-This project transformed PCA from a theoretical concept into a fully understood analytical tool.  
+The detailed theoretical analysis, derivations, and conceptual explanations are documented in the internship report:
 
-By connecting linear algebra, optimization, and statistical reasoning, this work reinforced the importance of foundational mathematics in machine learning.
-
-The study bridges theory and implementation, demonstrating both conceptual clarity and experimental validation.
+🔗 [View Full Internship Report](report/Intership_PCA_Report.pdf)
 
 ---
 
@@ -218,17 +200,17 @@ The study bridges theory and implementation, demonstrating both conceptual clari
 
 This research-oriented study was conducted as part of a structured Machine Learning internship at:
 
-Naval Physical and Oceanographic Laboratory (NPOL), 
-Defence Research and Development Organisation (DRDO), 
-Government of India  
+Naval Physical and Oceanographic Laboratory (NPOL)  
+Defence Research and Development Organisation (DRDO), Government of India  
 
 Under the mentorship of senior research scientists.
 
 ---
-##  Internship Research Report
 
-The detailed theoretical analysis and mathematical derivations are documented in the internship report:
+##  Conclusion
 
-[View Full Report](report/Intership_PCA_Report.pdf)
+This project transformed PCA from a theoretical concept into a fully understood analytical tool.
 
----
+By connecting linear algebra, optimization, and statistical reasoning, this work reinforced the importance of mathematical foundations in machine learning.
+
+The study bridges theory and implementation, demonstrating both conceptual clarity and experimental validation.
