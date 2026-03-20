@@ -184,3 +184,44 @@ Possible extensions:
 ---
 
 ## Repository Structure
+
+```
+principal-component-analysis/
+│
+├── notebooks/
+│   └── pca_analysis.ipynb
+│
+├── src/
+│   ├── pca_from_scratch.py
+│   └── pca_with_sklearn.py
+│
+├── report/
+│   └── Internship_PCA_Report.pdf
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Conclusion
+
+This project transformed PCA from a theoretical concept into a fully understood analytical tool.  
+
+By connecting linear algebra, optimization, and statistical reasoning, this work reinforced the importance of foundational mathematics in machine learning.
+
+The study bridges theory and implementation, demonstrating both conceptual clarity and experimental validation.
+
+---
+
+##  Internship Context
+
+This research-oriented study was conducted as part of a structured Machine Learning internship at:
+
+Naval Physical and Oceanographic Laboratory (NPOL), 
+Defence Research and Development Organisation (DRDO), 
+Government of India  
+
+Under the mentorship of senior research scientists.
+
+---
