@@ -1,7 +1,7 @@
 # Principal Component Analysis (PCA): Theoretical and Experimental Study  
 ### Internship Research Project  
 Conducted at Naval Physical and Oceanographic Laboratory (NPOL), DRDO  
-June – July 2025  
+**June – July 2025**
 
 ---
 
@@ -9,7 +9,7 @@ June – July 2025
 
 This repository presents a research-oriented study and experimental validation of **Principal Component Analysis (PCA)** conducted during my internship at the Naval Physical and Oceanographic Laboratory (NPOL), DRDO.
 
-The objective of this work was not merely to implement PCA, but to deeply understand:
+The objective was not merely to apply PCA, but to deeply understand:
 
 - Why PCA maximizes variance  
 - Why the covariance matrix formulation is used  
@@ -17,7 +17,7 @@ The objective of this work was not merely to implement PCA, but to deeply unders
 - How eigen decomposition relates to Singular Value Decomposition (SVD)  
 - When PCA succeeds and where its limitations arise  
 
-This study combines mathematical derivation, conceptual reasoning, and experimental validation on real datasets.
+This work combines **mathematical derivation, conceptual reasoning, and experimental validation** on real datasets.
 
 ---
 
@@ -30,9 +30,9 @@ High-dimensional datasets often contain:
 - Noise components  
 - Computational inefficiencies  
 
-PCA addresses these issues by transforming data into an orthogonal basis that captures maximum variance in descending order.
+PCA transforms data into an orthogonal basis that captures maximum variance in descending order, reducing dimensionality while preserving dominant structure.
 
-This internship emphasized understanding PCA from first principles rather than treating it as a black-box library function.
+The internship emphasized understanding PCA from first principles rather than treating it as a black-box library function.
 
 ---
 
@@ -47,7 +47,7 @@ X \in \mathbb{R}^{m \times n}
 ### Covariance Matrix
 
 \[
-C_x = \frac{1}{n-1} X^T X
+C_x = \frac{1}{n - 1} X^T X
 \]
 
 - Diagonal entries → Feature variances  
@@ -93,9 +93,9 @@ X = U \Sigma V^T
 Where:
 
 - \( V \) contains principal directions  
-- Singular values relate directly to eigenvalues  
+- Singular values are directly related to eigenvalues  
 
-The equivalence between eigen decomposition and SVD was explored and analyzed during the study.
+The equivalence between eigen decomposition and SVD was explored and analyzed during the internship.
 
 ---
 
@@ -105,7 +105,7 @@ To reduce dimensionality:
 
 1. Sort eigenvalues in descending order  
 2. Select top \( k \) eigenvectors  
-3. Project data onto reduced basis  
+3. Project data onto the reduced basis  
 
 This preserves maximum variance while discarding low-variance noise components.
 
@@ -115,8 +115,8 @@ This preserves maximum variance while discarding low-variance noise components.
 
 PCA was applied to two real datasets:
 
-- Diabetes Dataset  
-- Breast Cancer Dataset  
+- **Diabetes Dataset**
+- **Breast Cancer Dataset**
 
 Each dataset was:
 
@@ -128,7 +128,7 @@ Each dataset was:
   - PC1 vs PC2 Projection  
   - PC1 vs Last Principal Component  
 
-### Observations
+### Key Observations
 
 - Early components capture dominant structure  
 - Later components contain negligible variance  
@@ -175,14 +175,13 @@ Possible extensions:
 ---
 
 ##  Repository Structure
-
 Principal-Component-Analysis-internship/
 │
 ├── notebooks/
-│   └── pca_analysis.ipynb
+│ └── pca_analysis.ipynb
 │
 ├── report/
-│   └── Intership_PCA_Report.pdf
+│ └── Intership_PCA_Report.pdf
 │
 ├── requirements.txt
 ├── .gitignore
