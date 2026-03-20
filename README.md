@@ -225,3 +225,10 @@ Government of India
 Under the mentorship of senior research scientists.
 
 ---
+##  Internship Research Report
+
+The detailed theoretical analysis and mathematical derivations are documented in the internship report:
+
+[View Full Report](report/Intership_PCA_Report.pdf)
+
+---
